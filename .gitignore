@@ -37,3 +37,14 @@ Source/SolutionVersion.cs
 [Ll]ibraries
 glob:App_Data/RavenData
 glob:*Thumbs.db
+
+# BuildTOols
+glob:BuildTools/Tools/Phantom/FtpUploadTask.Phantom.boo
+glob:BuildTools/Tools/Phantom/FtpUploadTask.Phantom.dll
+glob:BuildTools/Tools/Phantom/FtpUploadTask.Phantom.imports
+glob:BuildTools/Tools/Phantom/FtpUploadTask.Phantom.pdb
+glob:BuildTools/Tools/Phantom/Tarantino.DatabaseManager.Tasks.Phantom.boo
+glob:BuildTools/Tools/Phantom/Tarantino.DatabaseManager.Tasks.Phantom.dll
+glob:BuildTools/Tools/Phantom/Tarantino.DatabaseManager.Tasks.Phantom.imports
+glob:BuildTools/Tools/Phantom/Tarantino.DatabaseManager.Tasks.Phantom.pdb
+glob:BuildTools/Tools/Phantom/CloudFrontDistribution.Phantom.*
