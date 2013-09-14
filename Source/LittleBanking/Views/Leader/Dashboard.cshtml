@@ -1,0 +1,42 @@
+﻿@model LittleBanking.Children.ChildList
+@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+    var Children = Model.Children;
+}
+@section title {Home}
+@section head {
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/Home/Index.less")"/>
+}
+@using (Html.BeginForm("Add", "Leader", new { }, FormMethod.Get, new { })) {
+<input type="submit" value="Add Child" />
+}
+<div>
+  <table>
+    <thead>
+        <tr>
+            <th>Child's Name</th>
+            <th>Birth Date</th>
+            <th>Account Balance</th>
+            <th>Child's Goal</th>
+            <th>Add Funds</th>
+            <th>Manage Account</th>
+            <th>Archive</th>
+        </tr>
+    </thead>
+      <tbody>
+          @foreach(var child in Children) {
+              <tr>
+                  <td>@child.Name</td>
+                  <td>@child.BirthDate</td>
+                  <td>@child.Balance.ToString("c")</td>
+                  <td>@child.Goal</td>
+                  <td>
+                      <a href="@Url.Action("Add", "Transaction", new { ChildUserID = child.ID })" class="button">Add Money</a>
+                  </td>
+                  <td></td>
+                  <td></td>
+              </tr>
+           }
+      </tbody>
+  </table>
+</div>

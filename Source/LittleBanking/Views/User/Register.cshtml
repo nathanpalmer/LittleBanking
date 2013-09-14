@@ -1,0 +1,46 @@
+﻿@{
+  Layout = "~/Views/Layouts/Application.cshtml";
+  var ReturnUrl = ViewData["ReturnUrl"] as String;
+}
+@section title {Register}
+@section head {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/User/Default.less")"/>
+}
+<div class="edits">
+    @using (Html.BeginForm("Register", "User"))
+    {
+        @Html.Hidden("ReturnUrl")
+
+        <div class="message">
+            <h1>New user registration</h1>
+        </div>
+
+        @Html.ValidationSummary("Uh. Problems. Dude.")
+    
+        <div>
+            <div class="input">
+                <label for="UserName">Enter a username: @Html.ValidationMessage("UserName", "*", new { @class = "required" })</label>
+                @Html.TextBox("UserName", "")
+            </div>
+            <div class="input">
+                <label for="Email">Enter an Email Address: @Html.ValidationMessage("Email", "*")</label>
+                @Html.TextBox("Email", "")
+            </div>
+            <div class="input">
+                <label for="Password">Enter a password: @Html.ValidationMessage("Password", "*")</label>
+                @Html.Password("Password", "")
+            </div>
+            <div class="input">
+                <label for="PasswordConfirmation">Confirm your password: @Html.ValidationMessage("PasswordConfirmation", "*")</label>
+                @Html.Password("PasswordConfirmation", "")
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="button">
+            <input type="submit" name="action" class="submit" value="Submit"/>
+        </div>
+
+    }
+</div>
+

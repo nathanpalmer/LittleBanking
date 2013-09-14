@@ -1,0 +1,138 @@
+﻿@using Aplite.Core.Domain
+@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+    var ReturnUrl = ViewData["ReturnUrl"] as String;
+    var Authenticators = ViewData["Authenticators"] as IEnumerable<Aplite.Core.Services.IUserAuthenticator>;
+}
+@section title {Login}
+@section head {
+  <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/User/Login.less")"/>    
+}
+@section script {
+    @if (Authenticators.Any(a => a.Handles(UserAuthenticationType.OpenId))) {
+        <script type="text/javascript" src="@Url.Content("~/Scripts/openid-ps-jquery-plugin.js")"> </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // Create jQuery plugin
+                $("form.openid-ps").openIdProviderSelector();
+            });
+        </script>
+    }
+    @if (Authenticators.Any(a => a.Handles(UserAuthenticationType.Local))) {
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var username = $(".local input[id=username]");
+                var password = $(".local input[id=password]");
+                var identifier = $(".local input[name=Identifier]");
+
+                function updateIdentifier() {
+                    identifier.val(username.val() + ":" + password.val());
+                }
+
+                username.change(function(element) { updateIdentifier(); });
+                password.change(function(element) { updateIdentifier(); });
+            });
+        </script>
+     }
+}
+@Html.ValidationSummary("Login was unsuccessful. Please correct the errors and try again.")
+<br/>
+@using (Html.BeginForm("Authenticate", "User", new { AuthenticationType = "OpenID" }, FormMethod.Post, new { id = "openid", @class = "openid-ps" } ))
+{
+    @Html.Hidden("ReturnUrl")
+    @Html.Hidden("openid_action")
+    if (Authenticators.Any(a => a.Handles(UserAuthenticationType.OpenId))) {
+         <fieldset>
+             <legend>Sign-in</legend>
+
+             <div class="selector">
+                 <p>
+                     Click your <a href="http://openid.net/what/" target="new">OpenID</a> account provider:
+                 </p>
+                 <div class="providers">
+                     <div class="large"></div>
+                     <div class="small"></div>
+                 </div>
+                 <div class="username" style="display:none">
+                     <p></p>
+                     <table>
+                         <tbody>
+                             <tr>
+                                 <td>
+                                     <input type="text" value="" />
+                                 </td>
+                                 <td>
+                                     <input id="submit1" type="submit" value="Sign-in"/>
+                                 </td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+
+             <div class="manual">
+                 <p>Or, manually enter your OpenID URL:</p>
+                 <table>
+                     <tbody>
+                         <tr>
+                             <td>
+                                 <input id="Identifier" name="Identifier" type="text" value="http://" />
+                                 <!-- OpenID req. -->
+                             </td>
+                             <td>
+                                 <input id="submit2" type="submit" value="Sign-in" />
+                             </td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </div>
+
+             <noscript>
+                 <p>
+                     OpenID is service that allows you to log-on to many different websites using a single indentity.
+                     Find out <a href="http://openid.net/what/">more about OpenID</a> and <a href="http://openid.net/get/">how to get an OpenID enabled account</a>.
+                 </p>
+             </noscript>
+         </fieldset>
+    }
+}
+@if (Authenticators.Any(a => a.Handles(UserAuthenticationType.Facebook)))
+{
+    <div class="facebook">
+        <p>Login using your facebook account</p>
+        <a href="@Url.Action("Authenticate","User", new { AuthenticationType = "Facebook" })">
+            <img src="@Url.Content("~/Images/auth/facebook-login-button.png")"/>
+        </a>
+    </div>
+}
+<br/>
+@if (Authenticators.Any(a => a.Handles(UserAuthenticationType.Twitter)))
+{
+    <div class="twitter">
+        <p>Sign in using your twitter account</p>
+        <a href="@Url.Action("Authenticate","User", new { AuthenticationType = "Twitter" })">
+            <img src="@Url.Content("~/Images/auth/sign-in-with-twitter-d.png")"/>
+        </a>
+    </div>
+}
+@if (Authenticators.Any(a => a.Handles(UserAuthenticationType.Local)))
+{
+    <div class="local">
+        @using (Html.BeginForm("Authenticate", "User", new {AuthenticationType = "Local"}, FormMethod.Post, new {id = "local"}))
+        {
+            @Html.Hidden("Identifier")
+            <p>Sign in using a local account.</p>
+            <label for="username">UserName:</label>
+            <input type="text" id="username"/>
+            <label for="password">Password:</label>
+            <input type="password" id="password"/>
+            <input type="submit" value="Login"/>
+        }
+
+        @using (Html.BeginForm("Register", "User"))
+        {
+            <p>Don't have an account?</p>
+            <input type="submit" value="Sign Up"/>
+        }
+    </div>
+}

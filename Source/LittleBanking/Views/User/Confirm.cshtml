@@ -1,0 +1,64 @@
+﻿@model Aplite.Core.Domain.UserConfirm
+@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+}
+@section title {Registration}
+@section head {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/User/Confirm.less")"/>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/spine.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/confirm.js")"></script>
+}
+<div class="edits" id="confirm">
+    @Html.ValidationSummary("Login was unsuccessful. Please correct the errors and try again.")
+    @using (Html.BeginForm("Confirm", "User"))
+    {
+        @Html.Hidden("ProviderUserKey")
+        @Html.Hidden("ReturnUrl")
+        <div class="message">
+            <h1>Create a new bank</h1>
+        </div>
+
+        <div>
+            <div class="input">
+                <label for="BankName">Name: @Html.ValidationMessage("BankName", "*", new {@class = "required"})</label>
+                @Html.TextBox("BankName", "")
+            </div>
+            <div class="input">
+                <label for="Url">Url: @Html.ValidationMessage("Url", "*", new {@class = "required"})</label>
+                @Html.TextBox("Url", "")
+            </div>
+        </div>
+        
+        <div class="message">
+            <h1>Your account information</h1>
+        </div>
+        
+        <div>
+            <div class="input">
+                <label for="LoginName">Login Name: @Html.ValidationMessage("LoginName", "*", new {@class = "required"})</label>
+                @Html.TextBox("LoginName", Model.LoginName, new { @readonly="true" })
+            </div>
+            <div class="input">
+                <label for="DisplayName">Your Name: @Html.ValidationMessage("DisplayName", "*", new {@class = "required"})</label>
+                @Html.TextBox("DisplayName", "")
+            </div>
+            <div class="input">
+                <label for="Email">Enter an Email Address: @Html.ValidationMessage("Email", "*")</label>
+                @if (string.IsNullOrWhiteSpace(Model.Email))
+                {
+                    @Html.TextBox("Email", Model.Email)
+                }
+                else
+                {
+                    @Html.TextBox("Email", Model.Email, new { @readonly="true" })
+                }
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="button">
+            <input type="submit" name="action" class="submit" value="Finish Registration"/>
+        </div>
+    }
+</div>

@@ -1,0 +1,197 @@
+﻿<error errorId="5e35e9f3-5f14-4341-934a-00df501e60f1" host="NATHAN-VM-PC" type="System.FormatException" message="String was not recognized as a valid DateTime." source="mscorlib" detail="System.FormatException: String was not recognized as a valid DateTime.&#xD;&#xA;   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)&#xD;&#xA;   at System.DateTime.Parse(String s)&#xD;&#xA;   at LittleBanking.Children.ChildManager.AddChild(Area Area, User user, String Name, String BirthDate) in c:\Source\Apsure\LittleBanking-Development\Source\LittleBanking.Core\Children\Service.Impl\ChildManager.cs:line 49&#xD;&#xA;   at LittleBanking.Leaders.LeaderController.Add(PermissionArea Area, String Name, String BirthDate) in c:\Source\Apsure\LittleBanking-Development\Source\LittleBanking.Core\Leaders\LeaderController.cs:line 58&#xD;&#xA;   at lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;InvokeActionMethodWithFilters&gt;b__12()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="nathan" time="2013-09-14T14:30:52.3650000Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:21&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_CHARSET:ISO-8859-1,utf-8;q=0.7,*;q=0.3&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip,deflate,sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8&#xD;&#xA;HTTP_COOKIE:timezoneoffset=-240; timezonename=EDT; openid-ps=google; ASP.NET_SessionId=5v0nzfq1uk3dshamd0ygxww1; .ASPXAUTH=99E8E060A02E990C64A5FEDE23F88F6C01515BB8145F6FF15BBD81005DBEC365929ECAED66D33F0AFF772F1BFAECC06DEC8B1D4BBF75E2F466C6CB0039DE2313D81CB69201C017B5B6A60A3C8E2E1358139B9E9E58377359D5B041BAAED2529D8AC54FFEBD643DC63A4956C38806DC9AB43BC9362952CC52FD5F1F6CD0CD4A29&#xD;&#xA;HTTP_HOST:localhost:1107&#xD;&#xA;HTTP_REFERER:http://localhost:1107/leader/add?&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11&#xD;&#xA;HTTP_ORIGIN:http://localhost:1107&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 21&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3&#xD;&#xA;Accept-Encoding: gzip,deflate,sdch&#xD;&#xA;Accept-Language: en-US,en;q=0.8&#xD;&#xA;Cookie: timezoneoffset=-240; timezonename=EDT; openid-ps=google; ASP.NET_SessionId=5v0nzfq1uk3dshamd0ygxww1; .ASPXAUTH=99E8E060A02E990C64A5FEDE23F88F6C01515BB8145F6FF15BBD81005DBEC365929ECAED66D33F0AFF772F1BFAECC06DEC8B1D4BBF75E2F466C6CB0039DE2313D81CB69201C017B5B6A60A3C8E2E1358139B9E9E58377359D5B041BAAED2529D8AC54FFEBD643DC63A4956C38806DC9AB43BC9362952CC52FD5F1F6CD0CD4A29&#xD;&#xA;Host: localhost:1107&#xD;&#xA;Referer: http://localhost:1107/leader/add?&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11&#xD;&#xA;Origin: http://localhost:1107&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Source\Apsure\LittleBanking-Development\Source\LittleBanking\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="nathan" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="SC\nathan" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="nathan" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="21" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/leader/add" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Source\Apsure\LittleBanking-Development\Source\LittleBanking\leader\add" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/leader/add" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="1107" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/leader/add" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="21" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="ISO-8859-1,utf-8;q=0.7,*;q=0.3" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip,deflate,sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="timezoneoffset=-240; timezonename=EDT; openid-ps=google; ASP.NET_SessionId=5v0nzfq1uk3dshamd0ygxww1; .ASPXAUTH=99E8E060A02E990C64A5FEDE23F88F6C01515BB8145F6FF15BBD81005DBEC365929ECAED66D33F0AFF772F1BFAECC06DEC8B1D4BBF75E2F466C6CB0039DE2313D81CB69201C017B5B6A60A3C8E2E1358139B9E9E58377359D5B041BAAED2529D8AC54FFEBD643DC63A4956C38806DC9AB43BC9362952CC52FD5F1F6CD0CD4A29" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:1107" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:1107/leader/add?" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:1107" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="Name">
+      <value string="Tavis" />
+    </item>
+    <item name="BirthDate">
+      <value string="" />
+    </item>
+  </form>
+  <cookies>
+    <item name="timezoneoffset">
+      <value string="-240" />
+    </item>
+    <item name="timezonename">
+      <value string="EDT" />
+    </item>
+    <item name="openid-ps">
+      <value string="google" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="5v0nzfq1uk3dshamd0ygxww1" />
+    </item>
+    <item name=".ASPXAUTH">
+      <value string="99E8E060A02E990C64A5FEDE23F88F6C01515BB8145F6FF15BBD81005DBEC365929ECAED66D33F0AFF772F1BFAECC06DEC8B1D4BBF75E2F466C6CB0039DE2313D81CB69201C017B5B6A60A3C8E2E1358139B9E9E58377359D5B041BAAED2529D8AC54FFEBD643DC63A4956C38806DC9AB43BC9362952CC52FD5F1F6CD0CD4A29" />
+    </item>
+  </cookies>
+</error>

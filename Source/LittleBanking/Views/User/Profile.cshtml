@@ -1,0 +1,55 @@
+﻿@model LittleBanking.Users.UserProfile
+@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+}
+@section head {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/User/Profile.less")"/>
+}
+
+<div class="edits" id="profile">
+    @Html.ValidationSummary("Save was unsuccessful. Please correct the errors and try again.")
+    @using (Html.BeginForm("Profile", "User"))
+    {
+        @Html.Hidden("ProviderUserKey")
+        @Html.Hidden("ReturnUrl")
+        <div class="message">
+            <h1>Your account information</h1>
+        </div>
+        
+        <div>
+            <div class="input">
+                <label for="DisplayName">Your Name: @Html.ValidationMessage("DisplayName", "*", new {@class = "required"})</label>
+                @Html.TextBox("DisplayName", Model.DisplayName)
+            </div>
+            <div class="input">
+                <label for="Email">Enter an Email Address: @Html.ValidationMessage("Email", "*")</label>
+                @if (string.IsNullOrWhiteSpace(Model.Email))
+                {
+                    @Html.TextBox("Email", Model.Email)
+                }
+                else
+                {
+                    @Html.TextBox("Email", Model.Email, new { @readonly="true" })
+                }
+            </div>
+        </div>
+        if (Model.Local)
+        {
+            @Html.Hidden("Local", Model.Local);
+            <div>
+                <div class="input">
+                    <label for="Password">Enter a password: @Html.ValidationMessage("Password", "*")</label>
+                    @Html.Password("Password", "")
+                </div>
+                <div class="input">
+                    <label for="PasswordConfirmation">Confirm your password: @Html.ValidationMessage("PasswordConfirmation", "*")</label>
+                    @Html.Password("PasswordConfirmation", "")
+                </div>
+            </div>
+        }
+        <div class="clear"></div>
+        <div class="button">
+            <input type="submit" name="action" class="submit" value="Save"/>
+        </div>
+    }
+</div>

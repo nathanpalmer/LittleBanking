@@ -1,0 +1,54 @@
+﻿@{
+    var MainLinks = ViewData["MainLinks"] as IEnumerable<Aplite.Core.Domain.ActionLink>;
+    var MetaLinks = ViewData["MetaLinks"] as IEnumerable<Aplite.Core.Domain.ActionLink>;
+}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>@RenderSection("title", false) | Little Banking</title>
+        <link rel="shortcut icon" href="@Url.Content("~/favicon.ico")" />
+        @RenderSection("head", false)
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <nav class="left">
+                    <ul class="navigation">
+                        @foreach (var link in MainLinks) {
+                            <li>
+                                <a href="@link.Url">@link.Text</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+                <nav class="right">
+                    <ul class="navigation">
+                        @foreach (var link in MetaLinks) {
+                            <li>
+                                <a href="@link.Url">@link.Text</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="wrapper">
+            <section id="content">
+                <div class="inner">
+                    @RenderBody()
+                </div>
+            </section>
+            <section id="sidebar">
+                <div class="inner">
+                    Sidebar
+                </div>
+            </section>
+            <div class="clearfix"></div>
+        </div>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="/Scripts/jquery-1.7.1.min.js"><\/script>')</script>
+        @RenderSection("script", false)
+        @Html.Partial("_GoogleAnalytics")
+    </body>
+</html>

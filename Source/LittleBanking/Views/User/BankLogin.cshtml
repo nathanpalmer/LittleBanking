@@ -1,0 +1,37 @@
+﻿@using Aplite.Core.Common
+@model LittleBanking.Users.UserLogin
+@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+    var ReturnUrl = ViewData["ReturnUrl"] as String;
+}
+@section title {Login to the @Model.Title}
+@section head
+{
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/User/Login.less")"/>
+}
+
+@Html.ValidationSummary("Login was unsuccessful. Please correct the errors and try again.")
+<br/>
+<div class="edits">
+    @using (Html.BeginForm("Authenticate", "User", new { AuthenticationType = "Local" }, FormMethod.Post, new { id = "local" } ))
+    {
+        @Html.Hidden("Title", Model.Title)
+        <div class="message">
+            <h1>Sign into @Model.Title</h1>
+        </div>
+
+        <div class="input">
+            <label for="username">Name:</label>
+            @Html.TextBox("Identifier", Model.Identifier)
+        </div>
+        <div class="input">
+            <label for="password">Birthday:</label>
+            @Html.TextBox("Password", Model.Identifier, new { autocomplete = "off" })
+        </div>
+        <div class="button">
+            <input type="submit" value="Login"/>
+        </div>
+    }
+    
+    <a href="@(Url.SiteRoot() + Url.Action("Login", "User"))">Parent Login</a>
+</div>

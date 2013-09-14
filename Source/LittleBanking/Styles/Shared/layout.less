@@ -1,0 +1,28 @@
+﻿div#wrapper
+{
+	max-width: @max-width;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+section#content
+{
+	.column(9);	
+}
+
+section#sidebar
+{
+	.column(3);
+}
+
+section#content, section#sidebar
+{
+	background: @bd-bg;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+
+.inner
+{
+	padding: 15px;
+}

@@ -1,0 +1,31 @@
+﻿@model LittleBanking.Transactions.AddMoney
+@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+}
+@section title {Add Money}
+@section head {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/Home/Default.less")"/>
+}
+<div class="edits">
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("ChildUserID", Model.ChildUserID)
+  
+        <div class="message">
+            <h1>Adding Money</h1>
+        </div>
+
+        @Html.ValidationSummary("Unable to add")
+
+        <div>
+            <div class="input">
+                <label for="Amount">Enter the amount: @Html.ValidationMessage("Amount", "*", new { @class = "required" })</label>
+                @Html.TextBox("Amount", Model.Amount)
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="button">
+            <input type="submit" name="action" class="submit" value="Save"/>
+        </div>
+    }
+</div>

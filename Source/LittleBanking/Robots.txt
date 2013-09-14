@@ -1,0 +1,6 @@
+﻿User-agent: *
+Crawl-Delay: 10
+
+Disallow: /user/authenticate
+Disallow: /user/confirm
+Disallow: /search

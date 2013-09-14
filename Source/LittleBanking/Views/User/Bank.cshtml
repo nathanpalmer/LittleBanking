@@ -1,0 +1,32 @@
+﻿@model LittleBanking.Users.UserBank
+@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+}
+@section head {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/User/Profile.less")"/>
+}
+
+<div class="edits" id="bank">
+    @Html.ValidationSummary("Save was unsuccessful. Please correct the errors and try again.")
+    @using (Html.BeginForm("Bank", "User"))
+    {
+        <div class="message">
+            <h1>Bank information</h1>
+        </div>
+        
+        <div>
+            <div class="input">
+                <label for="BankName">Name: @Html.ValidationMessage("BankName", "*", new {@class = "required"})</label>
+                @Html.TextBox("BankName", Model.BankName)
+            </div>
+            <div class="input">
+                <label for="Url">Url: @Html.ValidationMessage("Url", "*", new {@class = "required"})</label>
+                @Html.TextBox("Url", Model.Url)
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="button">
+            <input type="submit" name="action" class="submit" value="Save"/>
+        </div>
+    }
+</div>

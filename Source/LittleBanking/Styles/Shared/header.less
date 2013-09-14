@@ -1,0 +1,56 @@
+﻿/* Header Style */
+header
+{
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	clear: both;
+	height: 50px;
+	background: @hd-bg;
+
+
+	.wrapper
+	{
+		max-width: @max-width;
+		margin: 0 auto;
+	}
+	
+	ul 
+	{
+		display: inline-block;
+        padding: 15px 0 0 20px;
+	}
+	
+	li  
+	{
+	    a
+	    {
+	    	padding: 10px 10px 11px;
+	    	text-decoration: none;
+
+	    	&:hover
+	    	{
+	    		//background-color: white;
+	    		text-decoration: none;
+	    		color: white;
+		    }
+	    }
+	}
+	
+	.left 
+	{
+	    .column(9);
+	}
+	
+	.right
+	{
+	    .column(3);
+	    text-align: right;
+
+	    ul
+	    {
+	    	margin-right: 15px;
+	    }
+	}
+}
+

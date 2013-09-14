@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{465F25DD-68A9-48EA-AD19-A60DA426BCCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LittleBanking</RootNamespace>
+    <AssemblyName>LittleBanking.Features</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aplite.Core, Version=1.0.0.424, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Aplite\Aplite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Aplite.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Aplite\Aplite.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Aplite.Web.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Aplite\Aplite.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\..\Libraries\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\..\Libraries\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\..\Libraries\Autofac.Mvc3.2.5.2.830\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\ExternalProjects\Aplite\Libraries\AutoMapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\Libraries\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth, Version=3.4.7.11121, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\DotNetOpenAuth.3.4.7.11121\lib\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.1.11517.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalProjects\Aplite\Libraries\Elmah\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.2.0.712, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\FluentNHibernate.1.2.0.712\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=3.1.0.0, Culture=neutral, PublicKeyToken=a82054b837897c66, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\FluentValidation.3.1.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\Libraries\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\Libraries\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\Libraries\NHibernate.Castle.3.1.0.4000\lib\Net35\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationBuildTasks" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalProjects\Aplite\Libraries\System.Web.Mvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Children\Controller\ChildController.cs" />
+    <Compile Include="Children\Controller\ChildRoutes.cs" />
+    <Compile Include="Leaders\LeaderController.cs" />
+    <Compile Include="Leaders\LeaderRoutes.cs" />
+    <Compile Include="Children\Service\IChildManager.cs" />
+    <Compile Include="Children\Service.Impl\ChildManager.cs" />
+    <Compile Include="Errors\ErrorRoutes.cs" />
+    <Compile Include="Public\PublicRoutes.cs" />
+    <Compile Include="Transactions\Controller\TransactionController.cs" />
+    <Compile Include="Transactions\Controller\TransactionRoutes.cs" />
+    <Compile Include="Transactions\Services\ITransactionManager.cs" />
+    <Compile Include="Transactions\Services.Impl\TransactionManager.cs" />
+    <Compile Include="Users\Common\UserExtensions.cs" />
+    <Compile Include="ApplicationController.cs" />
+    <Compile Include="Errors\ErrorController.cs" />
+    <Compile Include="Public\PublicController.cs" />
+    <Compile Include="Operations\OperationsController.cs" />
+    <Compile Include="Operations\OperationsRoutes.cs" />
+    <Compile Include="Users\Controller\UserController.cs" />
+    <Compile Include="Transactions\Data\TransactionRepository.cs" />
+    <Compile Include="Transactions\Services\ITransactionRepository.cs" />
+    <Compile Include="Children\Service\IChildRepository.cs" />
+    <Compile Include="Children\Data\ChildRepository.cs" />
+    <Compile Include="Transactions\Data\TransactionDetailMapping.cs" />
+    <Compile Include="Transactions\Data\TransactionMapping.cs" />
+    <Compile Include="Children\Data\ChildMapping.cs" />
+    <Compile Include="AutoMapperConfiguration.cs" />
+    <Compile Include="Goals\Model\Goal.cs" />
+    <Compile Include="Children\Model\Child.cs" />
+    <Compile Include="Transactions\Model\Transaction.cs" />
+    <Compile Include="Transactions\Model\TransactionDetail.cs" />
+    <Compile Include="Transactions\Model\AddMoney.cs" />
+    <Compile Include="Children\Model\ChildList.cs" />
+    <Compile Include="Users\Controller\UserRoutes.cs" />
+    <Compile Include="Users\Model\UserBank.cs" />
+    <Compile Include="Users\Model\UserLogin.cs" />
+    <Compile Include="Users\Model\UserProfile.cs" />
+    <Compile Include="Users\Model\UserRegistration.cs" />
+    <Compile Include="Users\Validator\UserBankValidator.cs" />
+    <Compile Include="Users\Validator\UserProfileValidator.cs" />
+    <Compile Include="Users\Validator\UserRegistrationValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

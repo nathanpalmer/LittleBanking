@@ -1,0 +1,50 @@
+﻿/* Global Style */
+html 
+{
+	background: @all-bg;
+	color: @all-text;
+}
+
+body 
+{
+	font-family: Tahoma, Arial;
+	font-size: 14px;
+	margin: 50px 0px;
+	padding: 0px;
+}
+
+a 
+{
+    &:link 
+    {
+	    color: @all-link;
+	    text-decoration: none;
+    }
+    &:visited 
+    {
+	    color: @all-link;
+	    text-decoration: none;
+    }
+    &:hover 
+    {
+	    color: @all-link-hover;
+	    text-decoration:underline;
+    }
+}
+
+.clear 
+{
+	clear:both;
+	height:1px;
+	margin:-1px 0 0;
+}
+
+.navigation
+{
+    li 
+    {
+	    width: auto;
+	    margin:0 auto;
+	    display:inline;
+    }
+}

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleBanking", "LittleBanking\LittleBanking.csproj", "{B283DDDE-34C5-4405-A58F-502B540E332C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleBanking.Tests", "LittleBanking.Tests\LittleBanking.Tests.csproj", "{09CE2C74-8D81-4831-9755-29BE94BF78C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleBanking.Features", "LittleBanking.Features\LittleBanking.Features.csproj", "{465F25DD-68A9-48EA-AD19-A60DA426BCCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B283DDDE-34C5-4405-A58F-502B540E332C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B283DDDE-34C5-4405-A58F-502B540E332C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B283DDDE-34C5-4405-A58F-502B540E332C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B283DDDE-34C5-4405-A58F-502B540E332C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CE2C74-8D81-4831-9755-29BE94BF78C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CE2C74-8D81-4831-9755-29BE94BF78C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CE2C74-8D81-4831-9755-29BE94BF78C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CE2C74-8D81-4831-9755-29BE94BF78C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465F25DD-68A9-48EA-AD19-A60DA426BCCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465F25DD-68A9-48EA-AD19-A60DA426BCCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465F25DD-68A9-48EA-AD19-A60DA426BCCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465F25DD-68A9-48EA-AD19-A60DA426BCCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

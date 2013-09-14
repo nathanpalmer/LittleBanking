@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Layouts/Application.cshtml";
+}
+@section title {Add}
+@section head {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/Home/Add.less")"/>
+}
+@Html.ValidationSummary("Problem")
+<div class="edits">
+    @using (Html.BeginForm())
+    {
+        <div class="message">
+            <h1>Create a new child</h1>
+        </div>
+
+        <div>
+            <div class="input">
+                <label for="name">Child's Name</label>
+                <input type="text" id="name" name="Name"/>
+            </div>
+            <div class="input">
+                <label for="birthdate">Birthdate</label>
+                <input type="text" id="birthdate" name="BirthDate"/>
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="Add Child"/>
+        </div>
+    }
+</div>
