@@ -37,6 +37,7 @@ Source/SolutionVersion.cs
 [Ll]ibraries
 glob:App_Data/RavenData
 glob:*Thumbs.db
+glob:Source/LittleBanking/App_Data
 
 # BuildTOols
 glob:BuildTools/Tools/Phantom/FtpUploadTask.Phantom.boo
